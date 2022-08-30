@@ -1,0 +1,8 @@
+.sidebar{
+    flex: 0 0 250px;
+    background: $sidebar-bg;
+
+    .sidebar-header {
+        height: 68px;
+    }
+}
