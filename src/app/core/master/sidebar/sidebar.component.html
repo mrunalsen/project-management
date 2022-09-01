@@ -1,11 +1,32 @@
-<div class="sidebar-header d-flex justify-content-center align-items-center">
-    <div class="brand">Brand</div>
+<div class="sidebar-header d-flex justify-content-between align-items-center">
+    <div class="px-3">Brand</div>
+    <div class="px-3">X</div>
 </div>
 <ul class="nav flex-column">
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Projects</a>
+        <input type="checkbox" name="project-toggle" class="d-none" id="project-toggle">
+        <div class="d-flex test align-items-center justify-content-between">
+            <a class="nav-link" href="#">Projects</a>
+            <label for="project-toggle" class="toggle-label">X</label>
+        </div>
+        
+        <ul class="nav sub-menu flex-column overflow-hidden mx-3">
+            <a class="nav-link" href="#" routerLink="header">Project 1</a>
+            <li class="nav-item w-100"></li>
+            <a class="nav-link" href="#">Project 2</a>
+            <li class="nav-item w-100"></li>
+            <a class="nav-link" href="#">Project 3</a>
+            <li class="nav-item w-100"></li>
+            <a class="nav-link" href="#">Project 4</a>
+            <li class="nav-item w-100"></li>
+            <a class="nav-link" href="#">Project 5</a>
+            <li class="nav-item w-100"></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Team</a>
     </li>
 </ul>
