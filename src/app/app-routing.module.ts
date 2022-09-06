@@ -5,6 +5,8 @@ import { HeaderComponent } from './core/master/header/header.component';
 const routes: Routes = [
  
   {path:'header', component: HeaderComponent},
+ 
+  { path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule) },
 ];
 
 @NgModule({
