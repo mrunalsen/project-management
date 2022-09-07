@@ -8,6 +8,7 @@ import { Projects } from '../../projects.model';
   providedIn: 'root'
 })
 export class ProjectFormPresenterService {
+
   private projectFormData: Subject<Projects>
   public projectFormData$: Observable<Projects>
 
@@ -19,9 +20,9 @@ export class ProjectFormPresenterService {
   }
   buildform() {
     return this.fb.group({
-      title: ['', Validators.required],
-      info: ['', Validators.required],
-      category: ['', Validators.required],
+      title: ['',],
+      info: ['',],
+      category: ['',],
     })
   }
   onSubmit(projectForm: FormGroup) {

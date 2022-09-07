@@ -21,6 +21,8 @@ export class ProjectFormPresentationComponent implements OnInit {
   }
   onSubmit() {
     this.projectFormPresenter.onSubmit(this.projectForm)
+    console.log(this.projectForm);
+
   }
   onCancel() {
     this.location.back();

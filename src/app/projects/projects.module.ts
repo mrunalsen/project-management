@@ -8,6 +8,7 @@ import { ProjectInfoContainerComponent } from './project-info-container/project-
 import { ProjectFormPresentationComponent } from './project-form-container/project-form-presentation/project-form-presentation.component';
 import { ProjectListContainerComponent } from './project-list-container/project-list-container.component';
 import { ProjectListPresentationComponent } from './project-list-container/project-list-presentation/project-list-presentation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { ProjectListPresentationComponent } from './project-list-container/proje
   ],
   imports: [
     CommonModule,
-    ProjectsRoutingModule
+    ProjectsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
 
