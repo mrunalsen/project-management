@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable, Subject } from 'rxjs';
 import { Projects } from '../../projects.model';
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectFormPresenterService {
+export class ProjectTitleTabPresenterService {
 
   private projectFormData: Subject<Projects>
   public projectFormData$: Observable<Projects>
@@ -18,13 +17,15 @@ export class ProjectFormPresenterService {
     this.projectFormData = new Subject()
     this.projectFormData$ = new Observable()
   }
+
   buildform() {
     return this.fb.group({
-      title: ['',],
-      info: ['',],
-      category: ['',],
+      title: [''],
+      info: [''],
+      category: [''],
     })
   }
+
   onSubmit(projectForm: FormGroup) {
     if (!projectForm.valid) {
       return

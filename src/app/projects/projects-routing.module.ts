@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProjectFormContainerComponent } from './project-form-container/project-form-container.component';
-import { ProjectFormPresentationComponent } from './project-form-container/project-form-presentation/project-form-presentation.component';
+import { ProjectTitleTabPresentationComponent } from './project-form-container/project-title-tab-presentation/project-title-tab-presentation.component';
+import { TaskTabPresentationComponent } from './project-form-container/task-tab-presentation/task-tab-presentation.component';
 import { ProjectInfoContainerComponent } from './project-info-container/project-info-container.component';
 import { ProjectListContainerComponent } from './project-list-container/project-list-container.component';
 import { ProjectListPresentationComponent } from './project-list-container/project-list-presentation/project-list-presentation.component';
@@ -16,10 +17,13 @@ const routes: Routes = [
         path: 'list', component: ProjectListPresentationComponent
       },
       {
-        path: 'form', component: ProjectFormPresentationComponent
+        path: 'form', component: ProjectTitleTabPresentationComponent
       },
       {
         path: 'info', component: ProjectInfoContainerComponent
+      },
+      {
+        path: 'task', component: TaskTabPresentationComponent
       },
       {
         path: '',
