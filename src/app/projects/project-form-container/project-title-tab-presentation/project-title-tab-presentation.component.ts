@@ -25,7 +25,7 @@ export class ProjectTitleTabPresentationComponent implements OnInit {
   onSubmit() {
     this.projectFormPresenter.onSubmit(this.projectForm)
     console.log(this.projectForm);
-    this.route.navigateByUrl(`/projects/task`)
+    this.route.navigateByUrl(`/projects/form/task-title`)
   }
   onCancel() {
     this.location.back();

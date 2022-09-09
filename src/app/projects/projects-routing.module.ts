@@ -14,10 +14,23 @@ const routes: Routes = [
     children: [
 
       {
-        path: 'list', component: ProjectListPresentationComponent
+        path: 'list', component: ProjectListContainerComponent
       },
       {
-        path: 'form', component: ProjectTitleTabPresentationComponent
+        path: 'form', component: ProjectFormContainerComponent,
+        children: [
+          {
+            path: 'project-title', component: ProjectTitleTabPresentationComponent
+          },
+          {
+            path: 'task-title', component: TaskTabPresentationComponent
+          },
+          {
+            path: ``,
+            pathMatch: `full`,
+            redirectTo: `project-title`
+          }
+        ]
       },
       {
         path: 'info', component: ProjectInfoContainerComponent
