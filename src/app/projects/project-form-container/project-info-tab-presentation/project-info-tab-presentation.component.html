@@ -1,0 +1,59 @@
+<div class="project-form-wrapper w-50 mx-auto mt-5 rounded-4 p-5">
+    <div>
+        <h2 class="text-center">Project Info</h2>
+    </div>
+    <form class="project-form-wrapper p-5 m-auto">
+        <!-- Project SUMMARY: start -->
+        <div class="mb-3">
+            <label for="title" class="form-label">Project Summary</label>
+            <input type="text" name="title" id="title" class="form-control">
+        </div>
+        <!-- Project SUMMARY: end -->
+
+        <!-- Project INFO: start -->
+        <div class="mb-3">
+            <label for="info" class="form-label">Detailed Info</label>
+            <input type="text" name="info" id="info" class="form-control">
+        </div>
+        <!-- Project INFO: end -->
+
+        <!-- Project CATEGORY: start -->
+        <div class="mb-3">
+            <label for="category" class="form-label">Project Category</label>
+            <input type="text" name="category" id="category" class="form-control" placeholder="eg: Corporate Website">
+        </div>
+        <!-- Project CATEGORY: end -->
+
+        <!-- Billing TYPE: start -->
+        <div class="mb-3">
+            <label for="billing" class="form-label"> Billing Type</label>
+            <select class="form-select" id="billing">
+                <option [value]="option" *ngFor="let option of billing">{{option}}</option>
+            </select>
+        </div>
+        <!-- Billing TYPE: end -->
+
+        <!-- Project STATUS: start -->
+        <div class="mb-3">
+            <label for="status" class="form-label">Project Status</label>
+            <select class="form-select" id="status">
+                <option [value]="option" *ngFor="let option of status">{{option}}</option>
+            </select>
+        </div>
+        <!-- Project STATUS: end -->
+
+        <!-- Project FILES: start -->
+        <div class="input-group">
+            <input type="file" class="form-control" id="project-files" aria-describedby="files" aria-label="Upload">
+            <!-- <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">Button</button> -->
+        </div>
+        <!-- Project FILES: end -->
+
+        <!-- Buttons: start -->
+        <div class="pt-5 d-flex justify-content-between">
+            <button type="button" class="btn btn-primary" (click)="onBack()">back</button>
+            <button type="submit" class="btn btn-primary">Next</button>
+        </div>
+        <!-- Buttons: end -->
+    </form>
+</div>

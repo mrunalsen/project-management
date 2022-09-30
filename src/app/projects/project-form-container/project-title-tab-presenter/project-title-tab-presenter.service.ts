@@ -3,9 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable, Subject } from 'rxjs';
 import { Projects } from '../../projects.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProjectTitleTabPresenterService {
 
   private projectFormData: Subject<Projects>
@@ -16,6 +14,7 @@ export class ProjectTitleTabPresenterService {
   ) {
     this.projectFormData = new Subject()
     this.projectFormData$ = new Observable()
+    this.projectFormData$ = this.projectFormData.asObservable()
   }
 
   buildform() {

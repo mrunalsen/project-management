@@ -9,8 +9,9 @@ import { ProjectListContainerComponent } from './project-list-container/project-
 import { ProjectListPresentationComponent } from './project-list-container/project-list-presentation/project-list-presentation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectTitleTabPresentationComponent } from './project-form-container/project-title-tab-presentation/project-title-tab-presentation.component';
-import { TaskTabPresentationComponent } from './project-form-container/task-tab-presentation/task-tab-presentation.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProjectInfoTabPresentationComponent } from './project-form-container/project-info-tab-presentation/project-info-tab-presentation.component';
+import { ProjectsService } from './projects.service';
 
 
 
@@ -22,7 +23,7 @@ import { SharedModule } from '../shared/shared.module';
     ProjectListContainerComponent,
     ProjectListPresentationComponent,
     ProjectTitleTabPresentationComponent,
-    TaskTabPresentationComponent,
+    ProjectInfoTabPresentationComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +33,7 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   providers: [
-
+    ProjectsService
   ]
 })
 export class ProjectsModule { }

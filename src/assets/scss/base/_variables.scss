@@ -1,6 +1,9 @@
 // Navbar
-$nav-link-color:                    $white;
-$nav-link-hover-color:              $primary;
+$nav-link-color: $white;
+$nav-link-hover-color: $primary;
 
-$transition-collapse:         height .35s ease;
-$transition-collapse-width:   width .35s ease;
+$transition-collapse: height .35s ease;
+$transition-collapse-width: width .35s ease;
+
+// File Upload Variables
+$input-group-addon-bg: $body-bg-secondary;
