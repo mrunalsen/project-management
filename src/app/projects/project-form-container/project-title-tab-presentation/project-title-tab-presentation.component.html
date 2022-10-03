@@ -2,7 +2,7 @@
     <div>
         <h2 class="text-center">Create Project</h2>
     </div>
-    <form class="project-form-wrapper p-5 m-auto" [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <form class="project-form-wrapper p-5 m-auto" [formGroup]="projectForm">
         <div class="mb-3">
             <label for="title" class="form-label">Project Title</label>
             <input type="text" name="title" id="title" class="form-control" formControlName="title">
@@ -17,7 +17,7 @@
                 formControlName="category">
         </div>
         <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary">next</button>
+            <button type="submit" class="btn btn-primary" (click)="onNext()">next</button>
         </div>
     </form>
 </div>

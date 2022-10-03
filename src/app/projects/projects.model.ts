@@ -1,13 +1,15 @@
 export class Projects {
-
+    public id: number
     public title: string;
     public info: string;
     public category: string;
     constructor(
+        id: number,
         title: string,
         info: string,
         category: string,
     ) {
+        this.id = id
         this.title = title
         this.info = info
         this.category = category
